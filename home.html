@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Organizer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Link your CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>~Planify</h1>
+    <nav>
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Bookings</a></li>
+        
+      </ul>
+    </nav>   
+  </header>
+  <!-- live countdown for upcoming event -->
+  <div id="countdown"></div>
+<script>
+    const countdown = document.getElementById('countdown');
+    const eventDate = new Date("2024-12-15T18:00:00").getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const diff = eventDate - now;
+
+        if (diff < 0) {
+            countdown.innerHTML = "Event has started!";
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+</script>
+
+<!-- Home Section -->
+    <section id="Home">
+      <section class="background-section">
+        <div class="content">
+      <h1 >LET'S GET STARTED AND PLAN YOUR EVENTS WITH PLANIFY</h1>
+    <h2>Welcome to Our Event Planning Service</h2>
+  
+    
+
+    <p>Founded in 2024,is created out of a love for dynamic events and fine dining. Our goal is to provide unparalleled event services and outstanding customer service.
+
+      Why Planify? Because with us, there are infinite possibilities. Big or small, we are committed to creating one-of-a-kind events that your guests will remember for years to come. Customization is guaranteed, from your floor plan to your bar menu and signature lounge furniture.
+      
+      We work with the best vendors in the Nashville area to provide planning and design services at the venue of your dreams, and we also offer full services at The Bridge Building Event Spaces, The Bell Tower, and The Estate at Cherokee Dock through exclusive venue management and in-house catering.
+      <p>We specialize in organizing memorable weddings, corporate events, and social gatherings. From planning to execution, we offer comprehensive services to make your event a success. Let’s create an experience your guests will never forget.</p></td>
+</section>
+<!-- Services Section -->
+ 
+  <section id="services">
+    <h2>Our Services</h2>
+
+        <div class="service-box wedding">
+    <section class="hover-box-section">
+      <div class="hover-box">
+        <h3>Weddings</h3>
+        <p>From venue selection to floral arrangements and catering, we take care of every detail for your big day. Trust us to create a wedding experience that reflects your unique style and vision.</p>
+          
+      </div>
+      <div class="hover-box">
+          <h3>Birthdays</h3>
+          <p>For birthday parties, our team ensures a fun and smooth experience, complete with customized themes and entertainment options.According to the aage limit or the theme expected we provide the decoration and the venue.</p>
+        </div>
+      
+      <div class="hover-box">
+          <h3>Corporate Events</h3>
+          <p>Organize seamless corporate events with us, whether its a product launch, a corporate dinner, or an annual meeting. We handle everything from AV equipment to stage setup and more.</p>
+      </div>
+    
+
+    <div class="hover-box">
+      <h3>Social Gatherings</h3>
+      <p>For birthday parties, anniversaries, or any social gathering, our team ensures a fun and smooth experience, complete with customized themes and entertainment options.</p>
+    </div>
+
+
+
+<div class="hover-box">
+  <h3>Social Events</h3>
+  <p>Any type of social events or social gatheings that include number of people for the discussion or the speech , we provide the services according to the need.</p>
+</div>
+</section>
+
+
+
+    <!-- <div class="services-grid">
+      <div class="service">
+        <h3>Weddings</h3>
+        <p>From venue selection to floral arrangements and catering, we take care of every detail for your big day. Trust us to create a wedding experience that reflects your unique style and vision.</p>
+      </div>
+      <div class="service">
+        <h3>Corporate Events</h3>
+        <p>Organize seamless corporate events with us, whether it’s a product launch, a corporate dinner, or an annual meeting. We handle everything from AV equipment to stage setup and more.</p>
+      </div>
+      <div class="service">
+        <h3>Social Gatherings</h3>
+        <p>For birthday parties, anniversaries, or any social gathering, our team ensures a fun and smooth experience, complete with customized themes and entertainment options.</p>
+      </div>
+    
+    <div class="service">
+      <h3>Social Events</h3>
+      <p>Any type of social events or social gatheings that include number of people for the discussion or the speech , we provide the services according to the need.</p>
+  </div>
+  <div class="service">
+    <h3>Conferences</h3>
+    <p>For any type of business conferences or group discussions that require some certain thing to keep in mind , we provide the venue and arrangements according to the demand .</p>
+  
+</div>
+
+<div class="service">
+  <h3>Birthday parties</h3>
+  <p>For birthday parties, our team ensures a fun and smooth experience, complete with customized themes and entertainment options.According to the aage limit or the theme expected we provide the decoration and the venue.</p>
+</div>
+  </section> -->
+
+  <!-- About Us Section -->
+  
+  <section id="about" class="about-section">
+    <h2>About Us</h2>
+    <div class="about-hover-container">
+      <div class="about-hover-box">
+        <h3>Our Mission</h3>
+        <p class="about-summary">Turning dreams into unforgettable memories.</p>
+        <div class="about-details">
+          <p>At Planify, we focus on providing personalized and high-quality event management services. From weddings to corporate events, our team ensures every detail is planned.</p>
+        </div>
+      </div>
+      <div class="about-hover-box">
+        <h3>Our Vision</h3>
+        <p class="about-summary">Revolutionizing the event industry.</p>
+        <div class="about-details">
+          <p>We aim to be pioneers in creating innovative and engaging event experiences while ensuring sustainability and cost-efficiency for all our clients.</p>
+        </div>
+      </div>
+      <div class="about-hover-box">
+        <h3>Why Choose Us?</h3>
+        <p class="about-summary">Unmatched quality and attention to detail.</p>
+        <div class="about-details">
+          <p>With years of expertise, a dedicated team, and countless successful events, we deliver outstanding service tailored to meet your unique needs.</p>
+        </div>
+        </div>
+        <div class="about-hover-box">
+          <h3>our events</h3>
+          <p class="about-summary">You can plan any event with our help.</p>
+          <div class="about-details">
+            <p>"Host memorable social gatherings with our expert event planning services.we take care of every detail to create a warm and inviting atmosphere.</p>
+      </div>
+      </div>
+      <div class="about-hover-box">
+        <h3>Parties and Gatherings</h3>
+        <p class="about-summary">Unmatched quality and attention to detail.</p>
+        <div class="about-details">
+        <p>"From themed parties to casual social gatherings, we specialize in creating celebrations that leave a lasting impression.</p>
+        </div>
+    </div>
+    <div class="about-hover-box">
+      <h3>Who we are?</h3>
+      <p class="about-summary">Best event planner you ever met.</p>
+      <div class="about-details">
+        <p>Who We Are
+          "We are a passionate team of event planners and organizers at [Your Website Name], dedicated to bringing your dreams to reality.</p>
+  </section>
+  
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <div class="gallery-grid">
+      <h2>Event Gallery</h2></br>
+      <p>
+      <img src="event1.jpg" alt="Wedding Event">
+      <img src="corporate.jpg" alt="Corporate Event">
+      <img src="gathering.jpg" alt="Social Gathering">
+      <img src="wedding.jpg" alt="Wedding Setup">
+      <img src="corporate setup.jpg" alt="Corporate Setup">
+      <img src="social event.jpg" alt="Social Event">
+      <img src="event2.jpg" alt="Wedding Setup">
+      <img src="event3.jpg" alt="Corporate Setup">
+      <img src="event4.jpg" alt="event4">
+      <img src="setup.jpg" alt="Social Event">
+      <img src="event6.jpeg" alt="Social Event">
+      <img src="event11.jpg" alt="Wedding Setup">
+      <img src="event10.jpg" alt="Corporate Setup">
+      <img src="event9.jpeg" alt="event2">
+      <img src="event8.jpg" alt="Social Event"></p>
+      
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <p>"The wedding was more than we could have imagined. The attention to detail was amazing, and our guests were blown away. Thank you!"</p>
+        <p>- Sarah & John</p>
+      </div>
+      <div class="testimonial">
+        <p>"Our corporate event went off without a hitch. The team managed everything perfectly, from venue setup to technical support. Highly recommended!"</p>
+        <p>- Michael, XYZ Corp</p>
+      </div>
+      <div class="testimonial">
+        <p>"The birthday party was such a hit! The decorations and entertainment were spot on. We’ll definitely be booking again!"</p>
+        <p>- Emily P.</p>
+      </div>
+      <div class="testimonial">
+        <p>""We were absolutely thrilled with the event planning services provided by Planify. They turned our vision into reality, taking care of every detail"</p>
+      <p>-Anita</p>
+      </div>
+      <div class="testimonial">
+        <p>"Our experience with Planify was outstanding. They managed everything from start to finish, making sure everything was perfectly coordinated.</p>
+      <p>Kathie</p>
+      </div>
+      <div class="testimonial">
+        <p>"Planning an event with Planify was an absolute pleasure. They made the entire process smooth and stress-free.</p>
+      <p>-Alice</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking section -->
+
+  
+   <section id="contact">
+    <h2> for Events</h2>
+    <div class="contact-container">
+        
+        <form id="registrationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required></br></br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required></br></br>
+
+            <label for="Contact no">Contact no:</label>
+            <input type="contact no" id="Contact no" required></br></br>
+
+            <label for="Estimated guest count">Estimated guest count:</label>
+            <select id="Estimated guest count" required>
+           
+                <option value="less than 100">less than 100</option></br>
+                <option value="100-150">100-150</option></br>
+                <option value="150-200">150-200</option></br>
+                <option value="200-250">200-250</option></br>
+                <option value="250-300">250-300</option></br>
+                <option value="300-350">300-350</option></br>
+                <option value="350-400">350-400</option></br>
+                <option value="400-450">400-450</option></br>
+                <option value="450-500">450-500</option></br>
+                <option value="more than 500">more than 500</option>
+                </select></br><br>
+
+
+            <label for="event">Choose Event:</label>
+            <select id="event" required>
+                <option value="Wedding ">Wedding</option></br>
+                <option value="Corporates">Corporates</option></br>
+                <option value="Social gatherings">Social gatherings</option></br>
+                <option value="Birthday parties">Birthday Parties</option></br>
+                <option value="corporate Sector">Corporate Sector</option></br>
+                <option value="Social Events">Social Events</option></br>
+            </select></br></br>
+
+            <button type="submit">Register</button>
+        </form>
+    </section>
+<footer>
+    <p>&copy; 2024 Event Organizer | Designed by our team</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
